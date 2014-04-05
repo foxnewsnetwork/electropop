@@ -1,0 +1,18 @@
+{
+  "name": "electropop",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "rails s -d -p 4234 -e production"
+  },
+  "dependencies": {
+    "browserify": "~3.38.0"
+  },
+  "devDependencies": {
+    "bower": "~1.3.1",
+    "LiveScript": "~1.2.0",
+    "coffee-script": "~1.7.1",
+    "jade": "~1.3.1"
+  },
+  "engine": "node >= 0.10.26"
+}
