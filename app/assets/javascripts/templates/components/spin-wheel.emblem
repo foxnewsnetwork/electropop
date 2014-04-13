@@ -1,0 +1,5 @@
+button click=test
+  | Test
+.wheel
+  each spoke in spokes
+    wheel-spoke spoke=spoke

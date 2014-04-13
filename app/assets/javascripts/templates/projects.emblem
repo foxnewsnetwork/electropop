@@ -1,0 +1,6 @@
+#templates-projects
+  .container-fluid
+    .row
+      .one-third.pushed
+        spin-wheel models=projects
+            

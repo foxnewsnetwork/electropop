@@ -1,0 +1,8 @@
+@mixin welcome-index {
+  .no-script {
+    color: $text-white;
+    position: fixed;
+    top: 30%;
+    left: 25%;
+  }
+}

@@ -1,0 +1,1 @@
+class Electropop.ApplicationController extends Ember.Controller

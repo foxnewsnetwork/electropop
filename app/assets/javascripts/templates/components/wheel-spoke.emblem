@@ -1,0 +1,11 @@
+link-to 'project' spoke.permalink class=css_classes
+  figure bubbles=false
+    i.fa-book
+  .text-block
+    .title-card
+      | #{spoke.title} 
+    .desc-card
+      | #{spoke.tagline}
+    .debug-card
+      | #{css_classes}
+      | #{alignment}

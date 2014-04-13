@@ -1,0 +1,1 @@
+class Electropop.IndexRoute extends Ember.Route

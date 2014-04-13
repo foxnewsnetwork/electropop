@@ -1,0 +1,1 @@
+class Electropop.ProjectController extends Ember.ObjectController

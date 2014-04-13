@@ -1,0 +1,31 @@
+@mixin templates-index {
+  margin-top: 150px;
+
+  .fuzzy-white {
+    color: transparent;
+    text-shadow: 0 0 5px fade-out($text-white, 0.4);
+  }
+  .fuzzy-highlight {
+    color: transparent;
+    text-shadow: 0 0 6px fade-out($highlight-orange, 0.5); 
+  }
+  .fuzzy-flare {
+    color: transparent;
+    text-shadow: 0 0 6px fade-out($text-flare, 0.5); 
+  }
+  .fuzzy-electrify {
+    color: transparent;
+    text-shadow: 0 0 6px fade-out($highlight-blue, 0.5); 
+  }
+  .crystal {
+    text-align: center;
+  }
+  .bottom-fixture {
+    .pull-right {
+      float: right;
+    }
+    a {
+      font-size: 22px;
+    }
+  }
+}

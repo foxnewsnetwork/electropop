@@ -1,0 +1,9 @@
+@import 'templates/components/spin-wheel';
+@mixin templates-projects {
+  @include templates-components-spin-wheel;
+  .pushed {
+    @extend .col-lg-offset-8;
+    @extend .col-md-offset-8;
+    padding-right: 0px;
+  }  
+}
