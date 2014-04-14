@@ -36,6 +36,10 @@
       padding-bottom: 15px;
       margin-left: -10px;
     }
+
+    &:hover {
+      @include background-image(linear-gradient(left, $shadow-indigo, $background-black));
+    }
   }
   $i: 0;
   @while $i < 100 {
@@ -44,6 +48,7 @@
     }
     $i: $i + 5;
   }
+
   .title-card {
     font-size: 20px;
     font-weight: bold;

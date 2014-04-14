@@ -4,7 +4,21 @@ class Electropop.WheelSpokeComponent extends Ember.Component
     "wheel-spoke #{@get 'spoke.visibility'} #{@get 'spoke.activity'} alignment-#{@get 'alignment'}"
   +computed spoke.alignment
   alignment: ->
-    a = 5 * @get('spoke.alignment')
-    console.log a
-    a
+    5 * @get('spoke.alignment')
+
+  +computed spoke.anime_delay
+  animation_delay: ->
+    50 * @get 'spoke.anime_delay'
+  timeout: (time, callback)->
+    window.setTimeout callback, time
+  didInsertElement: ->
+    time = @get('animation_delay')
+    slide_opts = 
+      direction: 'right'
+    return unless time > 0
+    @timeout time, =>
+      @$('.wheel-spoke').hide 'slide', slide_opts, 300, ->
+        $(this).show 'slide', slide_opts, 300
+
+
     
