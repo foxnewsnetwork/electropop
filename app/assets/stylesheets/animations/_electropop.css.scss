@@ -1,0 +1,52 @@
+/* Chrome, Safari, Opera */
+@include keyframes(animations-electropop) {
+  0%, 100% {
+    @include opacity(0.1);
+    background: image-url('bolt1.png');
+  }
+  5% {
+    @include opacity(0.5);
+    background: image-url('bolt1.png'); 
+  }
+  10% {
+    @include opaque;
+    background: image-url('bolt1.png'); 
+  }
+  20% {
+    @include opacity(0.7);
+    background: image-url('bolt1.png'); 
+  }
+  30% {
+    @include opacity(0.4);
+    background: image-url('bolt1.png'); 
+  }
+  40% {
+    @include opacity(0.1);
+    background: image-url('bolt1.png'); 
+  }
+  50% {
+    @include opacity(0.1);
+    background: image-url('bolt2.png'); 
+  }
+  55% {
+    @include opacity(0.5);
+    background: image-url('bolt2.png'); 
+  }
+  60% {
+    @include opaque;
+    background: image-url('bolt2.png'); 
+  }
+  70% {
+    @include opacity(0.7);
+    background: image-url('bolt2.png'); 
+  }
+  80% {
+    @include opacity(0.4);
+    background: image-url('bolt2.png'); 
+  }
+  90% {
+    @include opacity(0.1);
+    background: image-url('bolt2.png'); 
+  }
+  
+}

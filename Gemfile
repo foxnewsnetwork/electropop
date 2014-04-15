@@ -16,6 +16,7 @@ gem "haml-rails", "~>0.4"
 gem 'mysql2'
 
 # Use SCSS for stylesheets
+gem 'animation', '~> 0.1.alpha.3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'compass-rails', '~> 1.1.7'
 gem 'jquery-ui-rails', '~> 4.2.0'

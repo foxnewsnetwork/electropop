@@ -1,0 +1,26 @@
+@mixin shared-footer {
+  #anime-electropop {
+    @include animation(animations-electropop 2s infinite);
+    background-repeat: repeat-x;
+    position: fixed;
+    height: 85px;
+    width: 100%;
+    bottom: 0px;
+  }
+  
+  .laser-gun, .crystal-reflector {
+    display: inline-block;
+  }
+  .laser-gun {
+    float: right;
+    margin-right: 10px;
+  }
+  .crystal-reflector {
+    float: left;
+    margin-left: 10px;
+  }
+  i {
+    @extend .fa-3x;
+    color: $text-flare;
+  }
+}

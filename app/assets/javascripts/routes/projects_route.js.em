@@ -14,8 +14,8 @@ class Electropop.ProjectsRoute extends Ember.Route
         tagline: "We did other stuff"
       },
       {
-        title: 'Project 3',
+        title: 'Roulette',
         permalink: 3,
-        tagline: "We didn't do anything"
+        tagline: "Random"
       }
     ]

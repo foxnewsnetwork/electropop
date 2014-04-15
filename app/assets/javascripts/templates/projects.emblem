@@ -1,6 +1,11 @@
 #templates-projects
   .container-fluid
     .row
+      .two-thirds.pulled
+        .text-flare.vertical-text 
+          | Welcome
       .one-third.pushed
         spin-wheel models=projects
-            
+
+.footer
+  #anime-electropop

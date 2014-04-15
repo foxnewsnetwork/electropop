@@ -35,6 +35,9 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
+    animation (0.1.alpha.3)
+      compass (>= 0.12.0)
+      sass (>= 3.2.0.alpha.95)
     arel (4.0.2)
     barber (0.4.2)
       ember-source
@@ -170,6 +173,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  animation (~> 0.1.alpha.3)
   bootstrap-sass (~> 3.1.0.2)
   coffee-rails (~> 4.0.0)
   compass-rails (~> 1.1.7)

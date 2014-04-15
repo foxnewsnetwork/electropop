@@ -1,9 +1,17 @@
 @import 'templates/components/spin-wheel';
 @mixin templates-projects {
   @include templates-components-spin-wheel;
+  .vertical-text {
+    @include rotate(90deg);
+  }
+  .flip-vertical {
+    @include rotate(-90deg);
+  }
+  h1 {
+    color: $text-flare;
+  }
   .pushed {
-    @extend .col-lg-offset-8;
-    @extend .col-md-offset-8;
+ 
     padding-right: 0px;
   }  
 }

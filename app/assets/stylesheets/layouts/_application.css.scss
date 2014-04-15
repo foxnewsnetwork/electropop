@@ -3,10 +3,10 @@
 @import 'welcome/index';
 @import 'templates/index';
 @import 'templates/projects';
-
+@import 'animations/electropop';
+@import 'shared/footer';
 body {
   background: $background-black;
-
   .flare {
     color: $text-flare;
   }
@@ -40,6 +40,13 @@ body {
     @extend .col-sm-12;
     @extend .col-xs-12;
   } 
+
+  .two-thirds {
+    @extend .col-lg-8;
+    @extend .col-md-8;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
+  }
 
   .two-quarters {
     @extend .col-lg-6;
@@ -82,4 +89,8 @@ main {
   #templates-projects {
     @include templates-projects
   }
+}
+
+.footer {
+  @include shared-footer;
 }
