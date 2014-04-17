@@ -4,9 +4,9 @@ class Electropop.ProjectsRoute extends Ember.Route
   model: (params) ->
     [
       {
-        title: "Project 1",
-        permalink: 1,
-        tagline: "We did stuff"
+        title: 'Roulette',
+        permalink: 3,
+        tagline: "Random"
       },
       {
         title: "Project 2",
@@ -14,8 +14,8 @@ class Electropop.ProjectsRoute extends Ember.Route
         tagline: "We did other stuff"
       },
       {
-        title: 'Roulette',
+        title: "Project 3",
         permalink: 3,
-        tagline: "Random"
+        tagline: "We did stuff"
       }
     ]

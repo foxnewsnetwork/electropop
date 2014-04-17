@@ -9,4 +9,4 @@ link-to 'project' spoke.permalink class=css_classes
     .debug-card
       | #{css_classes}
       | #{alignment}
-      | #{animation_classes}
+      | #{animation_delay}
