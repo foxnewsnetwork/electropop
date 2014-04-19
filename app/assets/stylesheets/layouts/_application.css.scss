@@ -4,7 +4,9 @@
 @import 'templates/index';
 @import 'templates/projects';
 @import 'animations/electropop';
+@import 'animations/ruby';
 @import 'shared/footer';
+@import 'shared/middler';
 body {
   background: $background-black;
   .flare {
@@ -89,6 +91,10 @@ main {
   #templates-projects {
     @include templates-projects
   }
+}
+
+.middler {
+  @include shared-middler;  
 }
 
 .footer {

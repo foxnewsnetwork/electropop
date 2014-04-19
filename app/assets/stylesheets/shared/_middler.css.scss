@@ -1,0 +1,26 @@
+@mixin shared-middler {
+  position: fixed;
+  top: 40%;
+  min-height: 10%;
+  width: 100%;
+
+  #anime-electropop {
+    @include animation(animations-electropop 1s);
+    background-size: 100% 55px;
+    background-repeat: no-repeat;
+    height: 85px;
+    position: absolute;
+    top: 40%;
+  }
+
+  #anime-ruby {
+    @include animation(animations-ruby 1s);
+    height: 175px;
+    background-repeat: no-repeat;
+    background-size: 175px 175px;
+    position: relative;
+    left: 25%;
+    top: 0px;
+  }
+
+}

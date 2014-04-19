@@ -41,7 +41,7 @@
       @include background-image(linear-gradient(left, $shadow-indigo, $background-black));
     }
   }
-  $i: 0;
+  $i: -100;
   @while $i < 100 {
     .alignment-#{$i} {
       margin-left: 0px + $i;
