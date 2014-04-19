@@ -41,8 +41,8 @@
       @include background-image(linear-gradient(left, $shadow-indigo, $background-black));
     }
   }
-  $i: -100;
-  @while $i < 100 {
+  $i: -150;
+  @while $i < 150 {
     .alignment-#{$i} {
       margin-left: 0px + $i;
     }
@@ -52,9 +52,12 @@
   .title-card {
     font-size: 20px;
     font-weight: bold;
+    white-space: nowrap;
   }
   .desc-card {
     font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .debug-card {
     display: none;

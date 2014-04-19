@@ -31,7 +31,7 @@ class Electropop.SpinWheelComponent extends Ember.Component
       spoke
   parametrized_arc: (y) ->
     midpoint = @midpoint
-    (y - midpoint) * -5 # (y - midpoint)
+    (y - midpoint) * (y - midpoint)
   activate_first_spoke: (spokes) ->
     spokes.map (spoke, ind) =>
       if ind is 0

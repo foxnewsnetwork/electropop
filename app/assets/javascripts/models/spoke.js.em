@@ -1,1 +1,0 @@
-class Electropop.Spoke extends DS.Model
