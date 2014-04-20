@@ -3,5 +3,6 @@
 Electropop.Router.map ()->
   @resource 'projects'
   @resource 'project', path: 'project/:project_id'
+  @resource 'expo', path: 'expo/:expo_id'
 
 

@@ -1,11 +1,11 @@
-link-to 'project' spoke.permalink class=css_classes
+link-to 'project' permalink class=css_classes
   figure bubbles=false
     i.fa-book
   .text-block
     .title-card
-      | #{spoke.title} 
+      | #{title} 
     .desc-card
-      | #{spoke.tagline}
+      | #{tagline}
     .debug-card
       | #{css_classes}
       | #{alignment}

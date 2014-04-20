@@ -4,9 +4,3 @@
       .two-thirds.pulled
       .one-third.pushed
         spin-wheel models=projects
-
-.middler
-  #anime-ruby
-  #anime-electropop
-
-.footer

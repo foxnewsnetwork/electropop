@@ -53,11 +53,13 @@
     font-size: 20px;
     font-weight: bold;
     white-space: nowrap;
+    overflow: hidden;
   }
   .desc-card {
     font-size: 14px;
     white-space: nowrap;
     text-overflow: ellipsis;
+    overflow: hidden;
   }
   .debug-card {
     display: none;

@@ -1,4 +1,4 @@
-@import 'templates/components/spin-wheel';
+
 @mixin templates-projects {
   @include templates-components-spin-wheel;
   .vertical-text {
@@ -10,8 +10,7 @@
   h1 {
     color: $text-flare;
   }
-  .pushed {
- 
+  .pushed { 
     padding-right: 0px;
-  }  
+  }
 }

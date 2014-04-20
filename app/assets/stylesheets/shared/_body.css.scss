@@ -1,0 +1,74 @@
+@mixin shared-body {
+  background: $background-black;
+  .flare {
+    color: $text-flare;
+  }
+
+  span.highlight {
+    color: $highlight-orange;
+  }
+
+  span.electrify {
+    color: $highlight-blue;
+  }
+
+  .white {
+    color: $text-white;
+  }
+
+  .parantheses:before {
+    content: " ( ";
+  }
+  .parantheses:after {
+    content: " ) ";
+  }
+
+  .upcase {
+    text-transform: uppercase;
+  }
+
+  .one-third {
+    @extend .col-lg-4;
+    @extend .col-md-4;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
+  } 
+
+  .two-thirds {
+    @extend .col-lg-8;
+    @extend .col-md-8;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
+  }
+
+  .two-quarters {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
+  } 
+
+  .align-right {
+    text-align: right;
+  }
+
+  .bottom-fixture {
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .middle-fixture {
+    position: fixed;
+    top: 45%;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  i {
+    @extend .fa;
+  }
+}

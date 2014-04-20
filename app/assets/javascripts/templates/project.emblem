@@ -1,2 +1,32 @@
 #templates-project
-  
+  .container-fluid
+    .row
+      .two-thirds.spaced-center
+        link-to 'expo' active_project.permalink
+          .electro-card
+          .cover-card
+          .row
+            .two-thirds
+              h2.big-and-fancy.white
+                | #{active_project.title}
+
+          .row
+            .one-third
+              ul.breakdown-card.white
+                li
+                  | Ruby
+                  .progress
+                    .progress-bar.progress-bar-danger role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"
+                    span.sr-only 60% complete
+                li
+                  | Javascript
+                  .progress
+                    .progress-bar.progress-bar-warning role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"
+                    span.sr-only 80% complete
+
+        .row
+          .one-third
+            .dropshadow
+
+      .one-third.pushed
+        spin-wheel models=projects active=active_project

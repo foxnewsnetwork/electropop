@@ -1,4 +1,10 @@
 class Electropop.WheelSpokeComponent extends Ember.Component
+  +computed spoke.tagline
+  tagline: -> @get 'spoke.tagline'
+  +computed spoke.title
+  title: -> @get 'spoke.title'
+  +computed spoke.permalink
+  permalink: -> @get 'spoke.permalink'
   +computed spoke.visibility, spoke.activity, alignment
   css_classes: ->
     "wheel-spoke #{@get 'spoke.visibility'} #{@get 'spoke.activity'} alignment-#{@get 'alignment'}"

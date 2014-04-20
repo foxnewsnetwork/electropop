@@ -1,0 +1,70 @@
+@mixin templates-project {
+  .pushed { 
+    padding-right: 0px;
+  }
+  .spaced-center {
+    margin-top: 15%;
+    padding-left: 20%;
+  }
+  .spaced-center:hover {
+    .big-and-fancy {
+      @include animation(animations-rotateflash 10s infinite);
+      @include animation-delay(0.55s);
+      @include opacity(1);
+    }
+    .cover-card {
+      @include animation(animations-beat 0.75s infinite);
+      @include animation-delay(0.55s);
+    }
+    .breakdown-card {
+      @include animation(animations-rotateflash-1 10s infinite);
+      @include animation-delay(0.55s);
+      @include opacity(1);
+    }
+    .dropshadow {
+      @include box-shadow(rgba($text-white, 0.8) 0 25px 25px, rgba($highlight-blue, 0.4) 0 20px 20px);
+      @include opacity(1);
+    }
+    .electro-card {
+      @include animation(animations-electropop 0.55s);
+    }
+  }
+  .electro-card {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    height: 45px;
+  }
+  .scatter-fixed {
+  }
+  .big-and-fancy {
+    font-size: 32px;
+    font-weight: bold;
+    @include opacity(0.6);
+  }
+  .cover-card {
+    @include background-image(image-url('ruby.png'));
+    @include rotate(45deg);
+    @include opacity(0.6);
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 225px;
+    height: 220px;
+    background-size: 200px 195px;
+    top: -50%;
+    left: 15%;
+  }
+  .dropshadow {
+    margin-left: 20px;
+    margin-right: 20px;
+    min-height: 5px;
+  }
+  ul.breakdown-card {
+    list-style: none;
+    padding-left: 0px;
+    @include opacity(0.6);
+    li {
+      margin-left: 0px;
+    }
+  }
+}

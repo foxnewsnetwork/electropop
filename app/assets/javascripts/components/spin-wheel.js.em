@@ -3,55 +3,62 @@ class Electropop.SpinWheelComponent extends Ember.Component
   +computed cutoff
   midpoint: ->
     m = Math.floor(@cutoff / 2)
-    console.log m
     m
   +computed
   cutoff: ->
     Math.floor(window.innerHeight / 90) - 1
-  +computed models, anime_count
+  +computed models.@each, anime_count
   spokes: ->
-    spokes = @to_spokes @models
-    spokes = @manage_animation spokes if @get('anime_count') > 0
-    spokes
+    return @get("animated_models") if @get('anime_count') > 0
+    return @get("aligned_models")
+  +computed models.@each, anime_count
+  animated_models: ->
+    @get('aligned_models').map (model, ind) =>
+      model.set 'anime_count', @get('anime_count')
+      model.set 'anime_delay', ind + 1
+      model
+  +computed models.@each
+  aligned_models: ->
+    @get('visible_models').map (model, ind) =>
+      model.set 'alignment', @parametrized_arc ind
+      model
+  +computed models.@each, cutoff
+  visible_models: ->
+    @get('activation_models').map (model, ind) =>
+      if ind < @get('cutoff')
+        model.set 'visibility', 'shown'
+      else
+        model.set 'visibility', 'hidden'
+      model
+  +computed models.@each
+  activation_models: ->
+    @spin_active_to_midpoint @activate_first_spoke @get 'screensized_models'
+  +computed models.@each
+  screensized_models: ->
+    @manage_screensize @get 'processed_models'
+  +computed models.@each
+  processed_models: ->
+    @get('models').map @to_hashes
   to_hashes: (model) ->
-    permalink: model.permalink
-    title: model.title
-    tagline: model.tagline
-  to_spokes: (models) ->
-    @manage_alignment @manage_visibility @manage_activation @manage_screensize $.map models, @to_hashes    
-  manage_animation: (spokes) ->
-    spokes = spokes.map (spoke, ind) =>
-      spoke.anime_count = @get('anime_count')
-      spoke.anime_delay = ind + 1
-      spoke
-    spokes
-  manage_alignment: (spokes) ->
-    spokes.map (spoke, ind) =>
-      spoke.alignment = @parametrized_arc ind
-      spoke
+    o = new Ember.Object()
+    o.set 'permalink', model.get('permalink')
+    o.set 'title', model.get('title')
+    o.set 'tagline', model.get('tagline')
+    o
   parametrized_arc: (y) ->
     midpoint = @midpoint
     (y - midpoint) * (y - midpoint)
   activate_first_spoke: (spokes) ->
     spokes.map (spoke, ind) =>
       if ind is 0
-        spoke.activity = 'active'
+        spoke.set 'activity', 'active'
       else
-        spoke.activity = 'inactive'
+        spoke.set 'activity', 'inactive'
       spoke
   spin_active_to_midpoint: (spokes) ->
     @rotate_array spokes, @midpoint+1
-  manage_activation: (spokes) ->
-    @spin_active_to_midpoint @activate_first_spoke spokes
-  manage_visibility: (spokes) ->
-    spokes.map (spoke, ind) =>
-      if ind < @cutoff
-        spoke.visibility = 'shown' 
-      else
-        spoke.visibility = 'hidden'
-      spoke
   manage_screensize: (array) ->
-    if array.length < @cutoff
+    if 0 < array.length && array.length < @cutoff
       @manage_screensize $.merge(array, @deep_clone array)
     else
       array.slice(0,@cutoff)

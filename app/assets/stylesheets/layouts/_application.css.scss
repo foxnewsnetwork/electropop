@@ -1,102 +1,28 @@
 @import 'shared/variables';
 @import 'shared/functions';
-@import 'welcome/index';
-@import 'templates/index';
-@import 'templates/projects';
-@import 'animations/electropop';
-@import 'animations/ruby';
+@import 'shared/main';
 @import 'shared/footer';
 @import 'shared/middler';
+@import 'shared/body';
+@import 'animations/electropop';
+@import 'animations/ruby';
+@import 'animations/beat';
+@import 'animations/rotateflash';
+
 body {
-  background: $background-black;
-  .flare {
-    color: $text-flare;
-  }
-
-  span.highlight {
-    color: $highlight-orange;
-  }
-
-  span.electrify {
-    color: $highlight-blue;
-  }
-
-  .white {
-    color: $text-white;
-  }
-
-  .parantheses:before {
-    content: " ( ";
-  }
-  .parantheses:after {
-    content: " ) ";
-  }
-
-  .upcase {
-    text-transform: uppercase;
-  }
-
-  .one-third {
-    @extend .col-lg-4;
-    @extend .col-md-4;
-    @extend .col-sm-12;
-    @extend .col-xs-12;
-  } 
-
-  .two-thirds {
-    @extend .col-lg-8;
-    @extend .col-md-8;
-    @extend .col-sm-12;
-    @extend .col-xs-12;
-  }
-
-  .two-quarters {
-    @extend .col-lg-6;
-    @extend .col-md-6;
-    @extend .col-sm-12;
-    @extend .col-xs-12;
-  } 
-
-  .align-right {
-    text-align: right;
-  }
-
-  .bottom-fixture {
-    position: fixed;
-    bottom: 5px;
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .middle-fixture {
-    position: fixed;
-    top: 45%;
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  i {
-    @extend .fa;
-  }
-  @include welcome-index;
+  @include shared-body;
 }
 
 main {
-  #templates-index {
-    @include templates-index;
-  }
-
-  #templates-projects {
-    @include templates-projects
-  }
+  @include shared-main;
 }
 
 .middler {
+  display: none;
   @include shared-middler;  
 }
 
 .footer {
+  display: none;
   @include shared-footer;
 }

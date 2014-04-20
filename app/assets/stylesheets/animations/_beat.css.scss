@@ -1,0 +1,10 @@
+@include keyframes(animations-beat) {
+  0%, 100% {
+    @include opacity(0.6);
+    background-size: 200px 195px;
+  }
+  15% {
+    @include opacity(1);
+    background-size: 225px 220px; 
+  }
+}
