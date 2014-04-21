@@ -41,7 +41,7 @@ class Electropop.SpinWheelComponent extends Ember.Component
     @get('models').map @to_hashes
   to_hashes: (model) ->
     o = new Ember.Object()
-    o.set 'permalink', model.get('permalink')
+    o.set 'permalink', model.get('id')
     o.set 'title', model.get('title')
     o.set 'tagline', model.get('tagline')
     o

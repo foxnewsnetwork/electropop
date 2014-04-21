@@ -9,5 +9,4 @@
 
 # for more details see: http://emberjs.com/guides/application/
 window.Electropop = Ember.Application.create()
-window.Electropop.ApplicationAdapter = DS.FixtureAdapter;
 $('.no-script').hide()

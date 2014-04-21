@@ -2,6 +2,7 @@
 @import 'templates/index';
 @import 'templates/projects';
 @import 'templates/project';
+@import 'templates/expo';
 @import 'templates/components/spin-wheel';
 
 @mixin shared-main {
@@ -18,6 +19,10 @@
     @include templates-project;
   }
 
+  #templates-expo {
+    @include templates-expo;
+  }
+  
   #welcome-index {
     @include welcome-index;
   }

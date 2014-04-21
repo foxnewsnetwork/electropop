@@ -12,6 +12,8 @@ gem "bootstrap-sass", "~> 3.1.0.2"
 gem "stringex", "~> 2.1.2"
 gem "haml", "~> 4.0.0"
 gem "haml-rails", "~>0.4"
+gem 'decent_exposure', '~> 2.3.1'
+gem 'ffaker', ">=1.20.0"
 # Use mysql as the database for Active Record
 gem 'mysql2'
 

@@ -1,0 +1,7 @@
+@mixin templates-expo {
+  .expo-card {
+    @include box-shadow(rgba($text-white, 0.8) 0 -15px 45px, rgba($text-white, 0.4) 0 10px 10px inset);
+    @include border-radius(10px);
+    margin-top: 5%;
+  }
+}

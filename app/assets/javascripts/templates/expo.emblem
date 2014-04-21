@@ -1,0 +1,5 @@
+#templates-expo
+  .container
+    .row.expo-card
+      .one-whole
+        h1.white= title

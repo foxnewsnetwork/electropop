@@ -2,13 +2,13 @@
   .container-fluid
     .row
       .two-thirds.spaced-center
-        link-to 'expo' active_project.permalink
+        link-to 'expo' permalink
           .electro-card
           .cover-card
           .row
             .two-thirds
               h2.big-and-fancy.white
-                | #{active_project.title}
+                | #{title}
 
           .row
             .one-third
