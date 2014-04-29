@@ -11,8 +11,8 @@
   }
   #backend-card, #frontend-card {
     @include background-image(radial-gradient(10% 5%, lighten($text-white, 10), $text-white));
-    padding-top: 250px;
-    padding-bottom: 250px;
+    padding-top: 10%;
+    min-height: 750px;
     h2 {
       font-size: 48px;
     }

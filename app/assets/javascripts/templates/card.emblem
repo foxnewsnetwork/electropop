@@ -1,3 +1,24 @@
+.debug-hidden
+  dl
+    dt permalink
+    dd #{permalink}
+    dt source
+    dd #{source}
+    dt tagline
+    dd #{tagline}
+    dt description
+    dd #{description}
+    dt pic
+    dd #{pic}
+    dt purpose
+    dd #{purpose}
+    dt source
+    dd #{source}
+    dt backends
+    dd #{backends}
+    dt frontends
+    dd #{frontends}
+    
 #templates-card
   #expo-nav
     .container
@@ -11,16 +32,17 @@
       .container
         .row
           .one-whole
-            h2 Ruby on Rails
-            h2 Redis
+            each backend in backends
+              h2 #{backend}
 
   if show_frontend
     #frontend-card.expo-card
       .container
         .row            
           .one-whole
-            h2 EmberJS
-            h2 Bootstrap
+            each frontend in frontends
+              h2 #{frontend}
+            
 
   if show_tagline
     #tagline-card.expo-card
@@ -29,24 +51,28 @@
           .one-whole
             h3
               span.flare Purpose 
-              | Styling CSS
+              | #{purpose}
             h3
               span.highlight github 
-              | source
+              a href=href_source #{source}
 
   if show_content
     #content-card.expo-card
       .container
         .row
           .three-quarters 
-            h3 This is some random text
+            h3 #{description}
           .one-quarter
             figure
-              img src='images/ruby.png'
+              img src=pic
 
   .bottom-fixture
     .container
       .row
         .one-whole.align-center
-          link-to 'card' next_card_id
-            i.fa-angle-down.fa-4x
+          if any_more_cards
+            link-to 'card' next_card_id
+              i.fa-angle-down.fa-4x
+          else
+            link-to 'project' project_id
+              i.fa-reply.fa-3x

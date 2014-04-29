@@ -1,11 +1,11 @@
 class Electropop.CardController extends Ember.ObjectController
-  +computed model.project
+  +computed model
   project: ->
     @get('model.project')
-
+    
   +computed project.id
   project_id: ->
-    @get('project.id')
+    parseInt @get('project.id')
 
   +computed model.card
   card_id: ->
@@ -42,3 +42,47 @@ class Electropop.CardController extends Ember.ObjectController
   +computed card_id
   show_content: ->
     @get('card_id') is 4
+
+  +computed card_id
+  any_more_cards: ->
+    @get('card_id') < 4
+
+  +computed project.permalink
+  permalink: ->
+    @get('project.permalink')
+
+  +computed project.source
+  source: ->
+    @get('project.source')
+
+  +computed source
+  href_source: ->
+    'http://' + @get('source')
+
+  +computed project.tagline
+  tagline: ->
+    @get('project.tagline')
+
+  +computed project.description
+  description: ->
+    @get('project.description')
+
+  +computed project.pic
+  pic: ->
+    @get('project.pic')
+
+  +computed project.purpose
+  purpose: ->
+    @get('project.purpose')
+
+  +computed project.source
+  source: ->
+    @get('project.source')
+
+  +computed project.backends
+  backends: ->
+    @get('project.backends')
+
+  +computed project.frontends
+  frontends: ->
+    @get('project.frontends')

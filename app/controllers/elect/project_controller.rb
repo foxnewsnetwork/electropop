@@ -16,8 +16,8 @@ class Elect::ProjectController < ApplicationController
         pic: 'images/ruby.png',
         purpose: 'Showcasing CSS',
         source: 'foxnewsnetwork.github.io',
-        backend: ['Ruby on Rails', 'Redis'],
-        frontend: ['Emberjs', 'Bootstrap', 'Compass']
+        backends: ['Ruby on Rails', 'Redis'],
+        frontends: ['Emberjs', 'Bootstrap', 'Compass']
       }
     }
   end

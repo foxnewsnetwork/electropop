@@ -12,6 +12,15 @@
     color: $highlight-blue;
   }
 
+  .debug-hidden {
+    position: absolute;
+    display: none;
+    top: 15px;
+    left: 15px;
+    width: 50%;
+    color: $text-flare;
+  }
+
   .white {
     color: $text-white;
   }
