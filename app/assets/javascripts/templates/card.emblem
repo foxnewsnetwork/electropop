@@ -1,0 +1,52 @@
+#templates-card
+  #expo-nav
+    .container
+      .row
+        .one-whole.align-center
+          link-to 'card' previous_card_id
+            i.fa-angle-up.fa-4x
+
+  if show_backend
+    #backend-card.expo-card
+      .container
+        .row
+          .one-whole
+            h2 Ruby on Rails
+            h2 Redis
+
+  if show_frontend
+    #frontend-card.expo-card
+      .container
+        .row            
+          .one-whole
+            h2 EmberJS
+            h2 Bootstrap
+
+  if show_tagline
+    #tagline-card.expo-card
+      .container
+        .row
+          .one-whole
+            h3
+              span.flare Purpose 
+              | Styling CSS
+            h3
+              span.highlight github 
+              | source
+
+  if show_content
+    #content-card.expo-card
+      .container
+        .row
+          .three-quarters 
+            h3 This is some random text
+          .one-quarter
+            figure
+              img src='images/ruby.png'
+
+  .bottom-fixture
+    .container
+      .row
+        .one-whole.align-center
+          link-to 'card' next_card_id
+            i.fa-angle-down.fa-4x

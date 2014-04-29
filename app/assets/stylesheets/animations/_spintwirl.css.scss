@@ -1,0 +1,35 @@
+@include keyframes(animations-spintwirl) {
+  $i: 0;
+  $j: 0%;
+  @while($i <= 100) {
+    #{$j} {
+      @include rotate3d(1, 9, 3, 36/10 * $i + 0deg);
+    }
+    $i: $i + 1;
+    $j: $j + 1;
+  }
+}
+
+@include keyframes(animations-spintwirl-y) {
+  $i: 0;
+  $j: 0%;
+  @while($i <= 100) {
+    #{$j} {
+      @include rotateY(36/10 * $i + 0deg);
+    }
+    $i: $i + 1;
+    $j: $j + 1;
+  }
+}
+
+@include keyframes(animations-spintwirl-x) {
+  $i: 0;
+  $j: 0%;
+  @while($i <= 100) {
+    #{$j} {
+      @include rotateX(36/10 * $i + 0deg);
+    }
+    $i: $i + 1;
+    $j: $j + 1;
+  }
+}

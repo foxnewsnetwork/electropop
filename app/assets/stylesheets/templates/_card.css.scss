@@ -1,0 +1,46 @@
+@mixin templates-card {
+  #expo-nav {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+  }
+  .expo-card {
+    padding-top: 80px;
+    height: 100%;
+    text-align: center;
+  }
+  #backend-card, #frontend-card {
+    @include background-image(radial-gradient(10% 5%, lighten($text-white, 10), $text-white));
+    padding-top: 250px;
+    padding-bottom: 250px;
+    h2 {
+      font-size: 48px;
+    }
+  }
+  #backend-card {
+    h2 {
+      text-align: left;
+    }
+  }
+  #frontend-card {
+    h2 {
+      text-align: right;
+    } 
+  }
+  #tagline-card {
+    padding-top: 250px;
+    padding-bottom: 250px;
+    h3 {
+      color: $text-white;
+    }
+  }
+  #content-card {
+    @include background-image(linear-gradient(top, $background-black, darken($text-white, 50)));
+    padding-top: 250px;
+    padding-bottom: 200px;
+    h3 {
+      text-align: right;
+      color: $text-white;
+    }
+  }
+}

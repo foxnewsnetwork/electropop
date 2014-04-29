@@ -1,5 +1,35 @@
 #templates-expo
-  .container
-    .row.expo-card
-      .one-whole
-        h1.white= title
+  #expo-nav
+    .container
+      .row
+        .one-whole.align-center
+          link-to 'project' 1
+            i.fa-angle-up.fa-4x
+
+  #title-elect.expo-card
+    i.fa-linux.fa-4x.spinning-z
+    i.fa-linux.fa-4x
+    i.fa-linux.fa-4x.spinning-y
+    i.fa-linux.fa-4x
+    i.fa-linux.fa-4x.spinning-x
+    i.fa-linux.fa-4x
+    i.fa-linux.fa-4x.spinning-z
+    i.fa-linux.fa-3x
+    i.fa-linux.fa-3x.spinning-y
+    i.fa-linux.fa-3x
+    i.fa-linux.fa-3x.spinning-x
+    i.fa-linux.fa-3x
+    i.fa-linux.fa-2x
+    i.fa-linux.fa-2x
+    i.fa-linux.fa-2x.spinning-x
+    .container
+      .row
+        .one-whole
+          h1= title
+
+  .bottom-fixture
+    .container
+      .row
+        .one-whole.align-center
+          link-to 'card' next_card_id
+            i.fa-angle-down.fa-4x
