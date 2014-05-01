@@ -13,17 +13,20 @@
     @include background-image(radial-gradient(10% 5%, lighten($text-white, 10), $text-white));
     padding-top: 10%;
     min-height: 750px;
-    h2 {
+    .loud {
+      @include rotate3d(4, 9, 0, 10deg);
       font-size: 48px;
     }
   }
   #backend-card {
-    h2 {
+    .loud {
+      @include text-shadow(rgba($background-black, 0.4) 15px 15px 10px);
       text-align: left;
     }
   }
   #frontend-card {
-    h2 {
+    .loud {
+      @include text-shadow(rgba($background-black, 0.4) -15px 15px 10px);
       text-align: right;
     } 
   }

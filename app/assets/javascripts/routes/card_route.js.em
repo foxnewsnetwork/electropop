@@ -14,3 +14,11 @@ class Electropop.CardRoute extends Ember.Route
     params = model.params
     if 0 is @generate_card_id params.raw_id
       @transitionTo 'expo', @generate_expo_id params.raw_id
+
+  actions:
+    willTransition: (transition) ->
+      $('main').effect
+        effect: 'slide',
+        direction: 'down',
+        duration: 400
+      true

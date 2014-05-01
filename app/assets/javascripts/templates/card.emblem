@@ -33,7 +33,7 @@
         .row
           .one-whole
             each backend in backends
-              h2 #{backend}
+              .loud #{backend}
 
   if show_frontend
     #frontend-card.expo-card
@@ -41,7 +41,7 @@
         .row            
           .one-whole
             each frontend in frontends
-              h2 #{frontend}
+              .loud #{frontend}
             
 
   if show_tagline
