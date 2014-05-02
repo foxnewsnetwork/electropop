@@ -10,7 +10,7 @@
     text-align: center;
   }
   #backend-card, #frontend-card {
-    @include background-image(radial-gradient(10% 5%, lighten($text-white, 10), $text-white));
+    @include background-image(image-url('grid2.png'), radial-gradient(10% 5%, lighten($text-white, 10), $text-white));
     padding-top: 10%;
     min-height: 750px;
     .loud {
@@ -20,13 +20,17 @@
   }
   #backend-card {
     .loud {
-      @include text-shadow(rgba($background-black, 0.4) 15px 15px 10px);
+      @include text-shadow(rgba($background-black, 0.4) 25px 15px 10px);
+      @include animation(animations-shadowshift 1s);
+      @include animation-timing-function(ease-out);
       text-align: left;
     }
   }
   #frontend-card {
     .loud {
-      @include text-shadow(rgba($background-black, 0.4) -15px 15px 10px);
+      @include text-shadow(rgba($background-black, 0.4) -25px 15px 10px);
+      @include animation(animations-shadowshift-2 1s);
+      @include animation-timing-function(ease-out);
       text-align: right;
     } 
   }
@@ -38,7 +42,7 @@
     }
   }
   #content-card {
-    @include background-image(linear-gradient(top, $background-black, darken($text-white, 50)));
+    @include background-image(linear-gradient(bottom, $background-black, darken($text-white, 50)));
     padding-top: 250px;
     padding-bottom: 200px;
     h3 {

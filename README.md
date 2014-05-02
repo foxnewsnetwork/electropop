@@ -21,6 +21,9 @@ TODO
 8. incorporate three.js and canvas to render really fancy backgrounds
 9. ruby rails activerecord models
 
+Thursday May 1, 2014
++ roll in threejs for background
+
 Wednesday April 30, 2014
 + card transitions part 2
 

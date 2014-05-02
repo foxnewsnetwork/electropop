@@ -28,20 +28,22 @@
             i.fa-angle-up.fa-4x
 
   if show_backend
-    #backend-card.expo-card
-      .container
-        .row
-          .one-whole
-            each backend in backends
-              .loud #{backend}
+    #backend-card
+      .expo-card
+        .container
+          .row
+            .one-whole
+              each backend in backends
+                .loud #{backend}
 
   if show_frontend
-    #frontend-card.expo-card
-      .container
-        .row            
-          .one-whole
-            each frontend in frontends
-              .loud #{frontend}
+    #frontend-card
+      .expo-card
+        .container
+          .row            
+            .one-whole
+              each frontend in frontends
+                .loud #{frontend}
             
 
   if show_tagline

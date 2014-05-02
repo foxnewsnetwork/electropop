@@ -2,9 +2,7 @@
   "name": "electropop",
   "version": "0.0.1",
   "dependencies": {
-    "ember-starter-kit": "~1.5.0",
-    "bootstrap-sass": "~3.0.2",
-    "font-awesome": "~4.0.3"
+    "threejs": "~0.0.67"
   },
   "devDependencies": {
   }

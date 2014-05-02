@@ -4,6 +4,7 @@
 #= require handlebars
 #= require ember
 #= require ember-data
+#= require three
 #= require_self
 #= require electropop
 
