@@ -86,3 +86,5 @@ class Electropop.CardController extends Ember.ObjectController
   +computed project.frontends
   frontends: ->
     @get('project.frontends')
+
+  
