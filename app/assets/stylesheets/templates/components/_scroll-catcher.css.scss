@@ -1,0 +1,22 @@
+@mixin templates-components-scroll-catcher {
+  .scroll-catcher {
+    @include opacity(0);
+    text-align: center;
+    &.fading {
+      @include animation(animations-fading 1s);
+      @include opacity(0);
+    }
+
+    &.visible {
+      @include opacity(1); 
+    }
+    .now-scrolling-text {
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .completion-bar {
+      background-color: $highlight-orange;
+      min-height: 2px;   
+    }
+  }
+}

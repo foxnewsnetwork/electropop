@@ -1,0 +1,3 @@
+.scroll-catcher class=visibility_class 
+  .now-scrolling-text Now Scrolling
+  .completion-bar style=width

@@ -1,10 +1,10 @@
 mixin Electropop.Scrolling
   bindScrolling: (opts) ->
     opts ?= { debounce: 100 }
-    $(document).bind 'touchmove', @scrolled
-    $(window).bind 'scroll', @scrolled
+    $(document).bind 'touchmove', (e) => @touchmoved e
+    $(window).bind 'mousewheel', (e) => @mousewheeled e
   unbindScrolling: ->
     $(document).unbind 'touchmove'
-    $(window).unbind 'scroll'
+    $(window).unbind 'mousewheel'
 
 

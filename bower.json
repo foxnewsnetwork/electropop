@@ -2,7 +2,8 @@
   "name": "electropop",
   "version": "0.0.1",
   "dependencies": {
-    "threejs": "~0.0.67"
+    "threejs": "0.0.x",
+    "jquery-mousewheel": "3.1.x"
   },
   "devDependencies": {
   }

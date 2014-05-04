@@ -5,9 +5,11 @@
 @import 'templates/expo';
 @import 'templates/card';
 @import 'templates/components/spin-wheel';
+@import 'templates/components/scroll-catcher';
 
 @mixin shared-main {
   @include templates-components-spin-wheel;
+  @include templates-components-scroll-catcher;
   #templates-index {
     @include templates-index;
   }

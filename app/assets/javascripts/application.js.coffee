@@ -1,4 +1,5 @@
 #= require jquery
+#= require jquery.mousewheel
 #= require jquery_ujs
 #= require jquery.ui.effect.all
 #= require handlebars

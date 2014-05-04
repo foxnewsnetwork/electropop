@@ -4,6 +4,17 @@
     top: 0px;
     width: 100%;
   }
+  #top-catcher {
+    position: absolute;
+    top: 5%;
+    left: 45%;
+  }
+  #bottom-catcher {
+    position: absolute;
+    color: $text-white;
+    bottom: 5%;
+    left: 45%;
+  }
   .expo-card {
     padding-top: 80px;
     height: 100%;

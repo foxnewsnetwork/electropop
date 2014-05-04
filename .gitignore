@@ -24,10 +24,11 @@
 public/components
 node_modules
 
-# Ignore most of the crap in three
-vendor/assets/javascripts/three/docs
-vendor/assets/javascripts/three/editor
-vendor/assets/javascripts/three/examples
-vendor/assets/javascripts/three/src
-vendor/assets/javascripts/three/test
-vendor/assets/javascripts/three/utils
+
+# Ignore everything except core files
+vendor/assets/javascripts/**
+!vendor/assets/javascripts/three/build
+
+# Don't ignore jquery mousewheel
+vendor/assets/javascripts/**
+!vendor/assets/javascripts/jquery-mousewheel/jquery.mousewheel.*

@@ -20,6 +20,8 @@
     dd #{frontends}
     
 #templates-card
+  #top-catcher
+    scroll-catcher direction='up' cardUp='cardUp'
   #expo-nav
     .container
       .row
@@ -68,8 +70,9 @@
             figure
               img src=pic
 
+  #bottom-catcher
+    scroll-catcher direction='down' cardDown='cardDown'
   .bottom-fixture
-    .container
       .row
         .one-whole.align-center
           if any_more_cards
