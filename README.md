@@ -20,6 +20,13 @@ TODO
 7. rework the spin-wheel and transitions
 8. incorporate three.js and canvas to render really fancy backgrounds
 9. ruby rails activerecord models
+10. fixed the issue with card 0 instead of being just expo
+
+Monday
++ Fix the godawful spin wheel scrolling issues
+
+Sunday
+- got now scrolling thing done
 
 Friday May 2, 2014
 + roll in card expo transition scrolls

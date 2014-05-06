@@ -5,13 +5,9 @@ class Electropop.ProjectController extends Ember.ObjectController
   +computed
   projects: -> 
     @store.find 'project'
-  +computed active_project
+  +computed active_project.id
   permalink: ->
-    p = @get('active_project.id')
-    console.log p
-    p
-  +computed active_project
+    @get('active_project.id')
+  +computed active_project.title
   title: ->
-    t = @get('active_project.title')
-    console.log t
-    t
+    @get('active_project.title')

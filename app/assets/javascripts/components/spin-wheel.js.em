@@ -1,38 +1,43 @@
-class Electropop.SpinWheelComponent extends Ember.Component
-  anime_count: 0
+class Electropop.SpinWheelComponent extends Ember.Component with Electropop.Scrolling
+  cutoff: Math.floor(window.innerHeight / 85) + 1
+  willInsertElement: ->
+    @bindScrolling()
+  willDestroyElement: ->
+    @unbindScrolling()
+
+  mousewheeled: (e) ->
+    if 0 > e.deltaY
+      @wheeldown()
+    else
+      @wheelup()
+
+  take_bot_spoke: ->
+    @$('.wheel div[id^=ember]').last().remove()
+  take_top_spoke: ->
+    @$('.wheel div[id^=ember]').first().remove()
+  wheeldown: ->
+    @take_bot_spoke().prependTo @$('.wheel')
+  wheelup: ->
+    @take_top_spoke().appendTo @$('.wheel')
+  +computed models.length
+  models_length: ->
+    parseInt @get 'models.length'
+
   +computed cutoff
   midpoint: ->
-    m = Math.floor(@cutoff / 2)
-    m
-  +computed
-  cutoff: ->
-    Math.floor(window.innerHeight / 90) - 1
-  +computed models.@each, anime_count
+    Math.floor(@cutoff / 2)
+  
+  +computed spokes.length
+  spokes_count: -> 
+    @get('spokes.length')
+
+  +computed models.@each, midpoint
   spokes: ->
-    return @get("animated_models") if @get('anime_count') > 0
-    return @get("aligned_models")
-  +computed models.@each, anime_count
-  animated_models: ->
-    @get('aligned_models').map (model, ind) =>
-      model.set 'anime_count', @get('anime_count')
-      model.set 'anime_delay', ind + 1
-      model
-  +computed models.@each
-  aligned_models: ->
-    @get('visible_models').map (model, ind) =>
-      model.set 'alignment', @parametrized_arc ind
-      model
-  +computed models.@each, cutoff
-  visible_models: ->
-    @get('activation_models').map (model, ind) =>
-      if ind < @get('cutoff')
-        model.set 'visibility', 'shown'
-      else
-        model.set 'visibility', 'hidden'
-      model
+    @spin_active_to_midpoint @get("activation_models")
+  
   +computed models.@each
   activation_models: ->
-    @spin_active_to_midpoint @activate_first_spoke @get 'screensized_models'
+    @activate_first_spoke @get 'screensized_models'
   +computed models.@each
   screensized_models: ->
     @manage_screensize @get 'processed_models'
@@ -44,10 +49,9 @@ class Electropop.SpinWheelComponent extends Ember.Component
     o.set 'permalink', model.get('id')
     o.set 'title', model.get('title')
     o.set 'tagline', model.get('tagline')
+    o.set 'alignment', 0
+    o.set 'visibility', 'shown'
     o
-  parametrized_arc: (y) ->
-    midpoint = @midpoint
-    (y - midpoint) * (y - midpoint)
   activate_first_spoke: (spokes) ->
     spokes.map (spoke, ind) =>
       if ind is 0
@@ -56,14 +60,15 @@ class Electropop.SpinWheelComponent extends Ember.Component
         spoke.set 'activity', 'inactive'
       spoke
   spin_active_to_midpoint: (spokes) ->
-    @rotate_array spokes, @midpoint+1
+    @rotate_array spokes, @midpoint + 1
   manage_screensize: (array) ->
     if 0 < array.length && array.length < @cutoff
       @manage_screensize $.merge(array, @deep_clone array)
     else
       array.slice(0,@cutoff)
-  deep_clone: (object) ->
-    $.extend true, {}, object
+  deep_clone: (objects) ->
+    $.map objects, (object) => @to_hashes(object)
+    
   rotate_array: (array, amount_right) ->
     if amount_right < 0
       head = array.splice(0, -amount_right)
@@ -73,17 +78,4 @@ class Electropop.SpinWheelComponent extends Ember.Component
       tail = array.splice(amount_right)
       tail.map (element) -> array.unshift element
       array
-  # Why isn't the above method better written?
-  # Why isn't the bottom method implemented as a special case of the top method?
-  # Because it's javascript and trying to be clever with javascript
-  # is like going for MENSA when you're retarded because your parents are related
-  rotleft_array: (array) ->
-    tail = array.slice(1)
-    tail.push array[0]
-    tail
-  slice: (array, i1, i2) ->
-    @deep_clone array.slice(i1, i2)
-  actions:
-    test: ->
-      @set 'anime_count', 1 + @get 'anime_count'
-      @set 'models', @rotleft_array @get 'models'
+  
