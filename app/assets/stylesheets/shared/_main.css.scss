@@ -6,10 +6,12 @@
 @import 'templates/card';
 @import 'templates/components/spin-wheel';
 @import 'templates/components/scroll-catcher';
+@import 'templates/components/language-breakdown';
 
 @mixin shared-main {
   @include templates-components-spin-wheel;
   @include templates-components-scroll-catcher;
+  @include templates-components-language-breakdown;
   #templates-index {
     @include templates-index;
   }

@@ -4,6 +4,9 @@
   width: 100%;
   top: 0px;
   overflow: hidden;
+  .virtually-invisible {
+    @include opacity(0);
+  }
   .pushed { 
     padding-right: 0px;
   }
@@ -48,28 +51,39 @@
     @include opacity(0.6);
   }
   .cover-card {
-    @include background-image(image-url('ruby.png'));
-    @include rotate(45deg);
+    &.ruby-card {
+      @include background-image(image-url('ruby.png'));
+      @include rotate(45deg);
+      top: -50%;
+      left: 15%;
+    }
+    &.javascript-card {
+      @include background-image(image-url('coffeescript.png'));
+      bottom: -55%;
+      left: 20%; 
+    }
+    &.css-card {
+      @include background-image(image-url('css.png'));
+      @include rotate(5deg);
+      top: 0;
+      left: 50%; 
+    }
+    &.haskell-card {
+      @include background-image(image-url('haskell.png'));
+      top: -75%;
+      left: 35%; 
+    }
     @include opacity(0.6);
-    position: absolute;
-    background-repeat: no-repeat;
     width: 225px;
     height: 220px;
     background-size: 200px 195px;
-    top: -50%;
-    left: 15%;
+    position: absolute;
+    background-repeat: no-repeat;
   }
   .dropshadow {
     margin-left: 20px;
     margin-right: 20px;
     min-height: 5px;
   }
-  ul.breakdown-card {
-    list-style: none;
-    padding-left: 0px;
-    @include opacity(0.6);
-    li {
-      margin-left: 0px;
-    }
-  }
+  
 }

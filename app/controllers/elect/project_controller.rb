@@ -17,7 +17,12 @@ class Elect::ProjectController < ApplicationController
         purpose: 'Showcasing CSS',
         source: 'foxnewsnetwork.github.io',
         backends: ['Ruby on Rails', 'Redis'],
-        frontends: ['Emberjs', 'Bootstrap', 'Compass']
+        frontends: ['Emberjs', 'Bootstrap', 'Compass'],
+        languages: [
+          { name: 'ruby', percentage: 60 },
+          { name: 'javascript', percentage: 25 },
+          { name: 'css', percentage: 15 }
+        ]
       }
     }
   end

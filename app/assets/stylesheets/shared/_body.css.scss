@@ -40,6 +40,10 @@
     text-transform: uppercase;
   }
 
+  .capitalize {
+    text-transform: capitalize;
+  }
+
   .one-third {
     @extend .col-lg-4;
     @extend .col-md-4;

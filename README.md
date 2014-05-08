@@ -22,8 +22,13 @@ TODO
 9. ruby rails activerecord models
 10. fixed the issue with card 0 instead of being just expo
 
+Tuesday
++ project pump separate component
++ project page real data
++ spin wheel should hide itself and whatnot during mouseovers
+
 Monday
-+ Fix the godawful spin wheel scrolling issues
+- Fix the godawful spin wheel scrolling issues
 
 Sunday
 - got now scrolling thing done

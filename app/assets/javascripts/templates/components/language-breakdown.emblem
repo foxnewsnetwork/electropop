@@ -1,0 +1,5 @@
+li
+  span.capitalize #{name}
+  .progress
+    .progress-bar role="progressbar" style=width_style class=color_class
+    span.sr-only #{percentage}

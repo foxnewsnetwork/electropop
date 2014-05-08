@@ -1,0 +1,10 @@
+@mixin templates-components-language-breakdown {
+  ul.breakdown-card {
+    list-style: none;
+    padding-left: 0px;
+    @include opacity(0.6);
+    li {
+      margin-left: 0px;
+    }
+  }
+}
