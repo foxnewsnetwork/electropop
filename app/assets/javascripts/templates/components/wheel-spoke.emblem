@@ -1,12 +1,27 @@
-link-to 'project' permalink class=css_classes
-  figure bubbles=false
-    i.fa-book
-  .text-block
-    .title-card
-      | #{title} 
-    .desc-card
-      | #{tagline}
-    .debug-card
-      | #{css_classes}
-      | #{alignment}
-      | #{animation_delay}
+if clickable
+  link-to 'project' permalink class=css_classes
+    figure bubbles=false
+      i class=fa_class
+    .text-block
+      .title-card
+        | #{title} 
+      .desc-card
+        | #{tagline}
+      .debug-card
+        | #{css_classes}
+        | #{alignment}
+        | #{animation_delay}
+
+else
+  div class=css_classes
+    figure bubbles=false
+      i class=fa_class
+    .text-block
+      .title-card
+        | #{title} 
+      .desc-card
+        | #{tagline}
+      .debug-card
+        | #{css_classes}
+        | #{alignment}
+        | #{animation_delay}

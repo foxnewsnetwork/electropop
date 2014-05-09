@@ -18,6 +18,7 @@ class Elect::ProjectController < ApplicationController
         source: 'foxnewsnetwork.github.io',
         backends: ['Ruby on Rails', 'Redis'],
         frontends: ['Emberjs', 'Bootstrap', 'Compass'],
+        type: 'project',
         languages: [
           { name: 'ruby', percentage: 60 },
           { name: 'javascript', percentage: 25 },

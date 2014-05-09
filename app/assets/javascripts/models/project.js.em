@@ -10,6 +10,7 @@ class Electropop.Project extends DS.Model
   backends: a()
   frontends: a()
   languages: a()
+  type: a 'string'
 
 Electropop.Project.FIXTURES = []
 Electropop.Project.FIXTURES.push

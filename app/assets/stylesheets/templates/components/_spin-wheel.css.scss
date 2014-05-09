@@ -10,14 +10,30 @@
     width: 100%;
     margin-top: -15px;
   }
-  .wheel-spoke {
-    $gradient-start: darken($highlight-blue, 15%);
+  div.wheel-spoke {
+    $gradient-start: darken($highlight-blue, 25%);
     @include background-image(linear-gradient(left, $gradient-start, $background-black));
-    
+  }
+  a.wheel-spoke {
+    $gradient-start: darken($highlight-blue, 15%);
+    $shadow-blue: lighten($highlight-blue, 20%);
+    $shadow-indigo: darken($highlight-blue, 35%);
+    @include background-image(linear-gradient(left, $gradient-start, $background-black));
+    &.active {
+      $gradient-start: darken($highlight-orange, 25%);
+      @include background-image(linear-gradient(left, $gradient-start, $background-black));
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-left: -10px;
+    }
+    &:hover {
+      @include background-image(linear-gradient(left, $shadow-indigo, $background-black));
+    }
+  }
+  .wheel-spoke {
     $shadow-blue: lighten($highlight-blue, 20%);
     $shadow-indigo: darken($highlight-blue, 35%);
     @include box-shadow($shadow-blue 0 0 35px, $shadow-indigo 0 0 3px 1px inset);
-    
     @include border-left-radius(10px);
 
     position: relative;
@@ -29,17 +45,6 @@
     color: $text-white;
     margin-top: 5px;
     margin-bottom: 5px;
-    &.active {
-      $gradient-start: darken($highlight-orange, 25%);
-      @include background-image(linear-gradient(left, $gradient-start, $background-black));
-      padding-top: 15px;
-      padding-bottom: 15px;
-      margin-left: -10px;
-    }
-
-    &:hover {
-      @include background-image(linear-gradient(left, $shadow-indigo, $background-black));
-    }
   }
   $i: -150;
   @while $i < 150 {

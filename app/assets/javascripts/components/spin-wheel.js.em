@@ -49,6 +49,7 @@ class Electropop.SpinWheelComponent extends Ember.Component with Electropop.Scro
     o.set 'permalink', model.get('id')
     o.set 'title', model.get('title')
     o.set 'tagline', model.get('tagline')
+    o.set 'type', model.get('type')
     o.set 'alignment', 0
     o.set 'visibility', 'shown'
     o
