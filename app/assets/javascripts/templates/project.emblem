@@ -1,26 +1,10 @@
 #templates-project
   .container-fluid
     .row
-      #main-thing.two-thirds.spaced-center class=main_space_class
-        link-to 'expo' permalink
-          .electro-card
-          each language in languages
-            language-card language=language
-          
-          .row
-            .two-thirds
-              h2.big-and-fancy.white
-                | #{title}
+      project-main project=active_project
 
-          .row
-            .one-third
-              ul.breakdown-card.white
-                each language in languages
-                  language-breakdown language=language
-
-        .row
-          .one-third
-            .dropshadow
-
-      #side-thing.one-third.pushed class=side_space_class
+      #side-thing.one-quarter.pushed
         spin-wheel models=projects active=active_project
+
+  button#expose-scroller.btn-link click="show_nav"
+    i.fa-bars

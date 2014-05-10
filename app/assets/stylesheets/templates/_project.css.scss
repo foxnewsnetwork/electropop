@@ -4,6 +4,22 @@
   width: 100%;
   top: 0px;
   overflow: hidden;
+
+  &.hide-nav {
+    @include translateX(25%);
+    #expose-scroll {
+      display: block;
+    }
+  }
+  #expose-scroller {
+    position: fixed;
+    display: none;
+    top: 15px;
+    right: 15px;
+    i {
+      @extend .fa-4x;
+    }
+  }
   .virtually-invisible {
     @include opacity(0);
   }

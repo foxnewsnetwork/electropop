@@ -1,0 +1,20 @@
+#main-thing.spaced-center.three-quarters
+  link-to 'expo' permalink
+    .electro-card
+    each language in languages
+      language-card language=language
+    
+    .row
+      .two-thirds
+        h2.big-and-fancy.white
+          | #{title}
+
+    .row
+      .one-third
+        ul.breakdown-card.white
+          each language in languages
+            language-breakdown language=language
+
+  .row
+    .one-third
+      .dropshadow
