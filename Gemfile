@@ -16,7 +16,7 @@ gem 'decent_exposure', '~> 2.3.1'
 gem 'ffaker', ">=1.20.0"
 # Use mysql as the database for Active Record
 gem 'mysql2'
-
+gem 'annotate', ">=2.5.0.pre1"
 # Use SCSS for stylesheets
 gem 'animation', '~> 0.1.alpha.3'
 gem 'sass-rails', '~> 4.0.0'

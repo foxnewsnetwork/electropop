@@ -6,25 +6,26 @@ class Elect::ProjectController < ApplicationController
   end
   private
   def _project
-    {
-      project: {
-        id: params[:id],
-        permalink: Faker::Lorem.sentence.to_url,
-        title: Faker::Company.name,
-        tagline: Faker::Lorem.sentence,
-        description: Faker::Lorem.paragraph,
-        pic: 'images/ruby.png',
-        purpose: 'Showcasing CSS',
-        source: 'foxnewsnetwork.github.io',
-        backends: ['Ruby on Rails', 'Redis'],
-        frontends: ['Emberjs', 'Bootstrap', 'Compass'],
-        type: 'project',
-        languages: [
-          { name: 'ruby', percentage: 60 },
-          { name: 'javascript', percentage: 25 },
-          { name: 'css', percentage: 15 }
-        ]
-      }
-    }
+    @project ||= Elect::Project.find params[:id]
   end
 end
+# {
+#   project: {
+#     id: params[:id],
+#     permalink: Faker::Lorem.sentence.to_url,
+#     title: Faker::Company.name,
+#     tagline: Faker::Lorem.sentence,
+#     description: Faker::Lorem.paragraph,
+#     pic: 'images/ruby.png',
+#     purpose: 'Showcasing CSS',
+#     source: 'foxnewsnetwork.github.io',
+#     backends: ['Ruby on Rails', 'Redis'],
+#     frontends: ['Emberjs', 'Bootstrap', 'Compass'],
+#     type: 'project',
+#     languages: [
+#       { name: 'ruby', percentage: 60 },
+#       { name: 'javascript', percentage: 25 },
+#       { name: 'css', percentage: 15 }
+#     ]
+#   }
+# }

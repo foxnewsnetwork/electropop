@@ -36,7 +36,7 @@
           .row
             .one-whole
               each backend in backends
-                .loud #{backend}
+                .loud #{backend.name}
 
   if show_frontend
     #frontend-card
@@ -45,7 +45,7 @@
           .row            
             .one-whole
               each frontend in frontends
-                .loud #{frontend}
+                .loud #{frontend.name}
             
 
   if show_tagline
