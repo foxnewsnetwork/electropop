@@ -1,0 +1,8 @@
+.list-group-item
+  %span.bold.colon= t(:language)
+  %span.dash= language.name
+  = language.percentage
+  = '%'
+  .pull-right
+    = link_to admin_language_path(language), method: :delete do
+      %i.fa-times

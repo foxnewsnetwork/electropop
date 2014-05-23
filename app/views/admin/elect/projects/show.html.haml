@@ -1,0 +1,72 @@
+.jumbotron
+  .container
+    .row
+      .one-quarter
+        = link_to admin_everythings_path, class: 'btn btn-lg btn-default btn-block' do
+          %i.fa-tasks
+          = t(:index)
+      .one-quarter
+        = link_to root_path + "#/project/#{project.id}", class: 'btn btn-lg btn-primary btn-block' do
+          %i.fa-eye
+          = t(:go_live!)
+      .one-quarter
+        = link_to edit_admin_expo_path(project), class: 'btn btn-lg btn-info btn-block' do
+          %i.fa-edit
+          = t(:edit)
+      .one-quarter
+        = link_to admin_demo_path(project), method: :delete, class: 'btn btn-lg btn-danger btn-block' do
+          %i.fa-times
+          = t(:destroy)
+
+.container
+  .row
+    .two-quarters
+      %dl
+        %dt= t :title
+        %dd= project.title
+        %dt= t :tagline
+        %dd= project.tagline
+        %dt= t :purpose
+        %dd= project.purpose
+    .two-quarters
+      %dl
+        %dt= t :description
+        %dd= project.description
+        %dt= t :project_type
+        %dd= project.project_type
+
+  .row
+    .one-third
+      .list-group= render partial: 'language', collection: project.languages
+      = form_for :languages, url: admin_project_languages_path(project) do |f|
+        .form-group
+          = f.label :name
+          = f.text_field :name, class: 'form-control'
+        .form-group
+          = f.label :percentage
+          = f.number_field :percentage, class: 'form-control'
+        = f.submit
+
+    .one-third
+      .list-group= render partial: 'framework', collection: project.backends
+      .list-group= render partial: 'framework', collection: project.frontends
+      = form_for :frameworks, url: admin_project_frameworks_path(project) do |f|
+        .form-group
+          = f.label :framework_type
+          .select-control
+            = f.select :framework_type, options_for_select(Elect::Framework::FrameworkTypes)
+        .form-group
+          = f.label :name
+          = f.text_field :name, class: 'form-control'
+        = f.submit
+
+    .one-third
+      .list-group= render partial: 'link', collection: project.external_links
+      = form_for :externals, url: admin_project_externals_path(project) do |f|
+        .form-group
+          = f.label :href
+          = f.text_field :href, class: 'form-control'
+        .form-group
+          = f.label :name
+          = f.text_field :name, class: 'form-control'
+        = f.submit

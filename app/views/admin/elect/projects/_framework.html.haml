@@ -1,0 +1,6 @@
+.list-group-item
+  %span.bold.colon= t framework.framework_type
+  = framework.name
+  .pull-right
+    = link_to admin_framework_path(framework), method: :delete do
+      %i.fa-times

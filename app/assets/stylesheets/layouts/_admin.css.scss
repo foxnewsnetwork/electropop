@@ -1,0 +1,24 @@
+@import 'shared/variables';
+@import 'shared/functions';
+@import 'shared/footer';
+@import 'shared/middler';
+@import 'shared/common';
+@import 'admin/elect/shared/main';
+
+body {
+  @include shared-common;
+}
+
+main {
+  @include admin-elect-shared-main;
+}
+
+.middler {
+  display: none;
+  @include shared-middler;  
+}
+
+.footer {
+  display: none;
+  @include shared-footer;
+}

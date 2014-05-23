@@ -32,6 +32,10 @@ TODO
 9. ruby rails activerecord models
 10. fixed the issue with card 0 instead of being just expo
 
+Thursday
+=
+
+
 Weekends
 
 

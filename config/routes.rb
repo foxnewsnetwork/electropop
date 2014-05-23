@@ -9,6 +9,21 @@ Electropop::Application.routes.draw do
   resources :projects, only: [:index], controller: 'elect/projects'
   resources :projects, only: [:show], controller: 'elect/project'
 
+  namespace :admin do
+    resources :languages, only: [:destroy], controller: 'elect/languages'
+    resources :frameworks, only: [:destroy], controller: 'elect/frameworks'
+    resources :externals, only: [:destroy], controller: 'elect/externals'
+    resources :expos, only: [:edit, :update], controller: 'elect/expos'
+    resources :demos, only: [:destroy], controller: 'elect/demos'
+    resources :everythings, only: [:index], controller: 'elect/everythings'
+    resources :projects, only: [:show], controller: 'elect/projects' do
+      resources :languages, only: [:create], controller: 'elect/projects/languages'
+      resources :frameworks, only: [:create], controller: 'elect/projects/frameworks'
+      resources :externals, only: [:create], controller: 'elect/projects/externals'
+    end
+    resources :expos, only: [:new, :create], controller: 'elect/expos'
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

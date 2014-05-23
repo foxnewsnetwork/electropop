@@ -1,0 +1,160 @@
+@mixin shared-common {
+  .bold {
+    font-weight: bold;
+  }
+  .colon:after {
+    content: ":";
+  }
+  .ellipsis:after {
+    content: "...";
+  }
+  .comma:not(:last-child) {
+    &:after {
+      content: ",";
+    }
+  }
+  .tab {
+    margin-right: 15px; 
+  }
+  .dash:after {
+    content: " - ";
+  }
+  .pound:after {
+    content: '#';
+  }
+  .ellipsis {
+    text-overflow: ellipsis;
+  }
+  .parantheses:after {
+    content: ")";
+  }
+  .parantheses:before {
+    content: "(";
+  }
+  .italic {
+    font-style: italic;
+  }
+  .capitalize {
+    text-transform: capitalize;
+  }
+  .upcase {
+    text-transform: uppercase;
+  }
+  .select-control {
+    select {
+      @extend .form-control;
+    }
+  }
+  i {
+    @extend .fa;
+  }
+  .flare {
+    color: $text-flare;
+  }
+
+  span.highlight {
+    color: $highlight-orange;
+  }
+
+  span.electrify {
+    color: $highlight-blue;
+  }
+
+  .debug-hidden {
+    position: absolute;
+    display: none;
+    top: 15px;
+    left: 15px;
+    width: 50%;
+    color: $text-flare;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .white {
+    color: $text-white;
+  }
+
+  .parantheses:before {
+    content: " ( ";
+  }
+  .parantheses:after {
+    content: " ) ";
+  }
+
+  .align-center {
+    text-align: center;
+  }
+
+  .align-right {
+    text-align: right;
+  }
+
+  .upcase {
+    text-transform: uppercase;
+  }
+
+  .capitalize {
+    text-transform: capitalize;
+  }
+
+  .one-third {
+    @extend .col-lg-4;
+    @extend .col-md-4;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
+  } 
+
+  .two-thirds {
+    @extend .col-lg-8;
+    @extend .col-md-8;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
+  }
+
+  .two-quarters {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
+  } 
+
+  .three-quarters {
+    @extend .col-lg-9;
+    @extend .col-md-9;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
+  }
+
+  .one-quarter {
+    @extend .col-lg-3;
+    @extend .col-md-3;
+    @extend .col-sm-6;
+    @extend .col-xs-6;
+  } 
+
+  .one-whole {
+    @extend .col-lg-12;
+    @extend .col-md-12;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
+  }
+
+  .bottom-fixture {
+    position: fixed;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    bottom: 5px;
+  }
+
+  .middle-fixture {
+    position: fixed;
+    top: 45%;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

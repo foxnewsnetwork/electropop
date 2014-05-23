@@ -1,0 +1,6 @@
+.list-group-item
+  %span.bold.dash= link.name
+  = link.href
+  .pull-right
+    = link_to admin_external_path(link), method: :delete do
+      %i.fa-times

@@ -1,0 +1,5 @@
+@import 'admin/elect/projects/show';
+
+@mixin admin-elect-shared-main {
+  @include admin-elect-projects-show;
+}

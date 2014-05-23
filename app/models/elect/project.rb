@@ -30,6 +30,8 @@ class Elect::Project < ActiveRecord::Base
   has_many :frontends,
     -> { frontend },
     class_name: 'Elect::Framework'
+  has_many :frameworks,
+    class_name: 'Elect::Framework'
   has_many :external_links,
     class_name: 'Elect::ExternalLink'
 

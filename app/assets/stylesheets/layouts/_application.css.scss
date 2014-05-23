@@ -3,6 +3,7 @@
 @import 'shared/main';
 @import 'shared/footer';
 @import 'shared/middler';
+@import 'shared/common';
 @import 'shared/body';
 @import 'animations/electropop';
 @import 'animations/ruby';
@@ -13,6 +14,7 @@
 @import 'animations/fading';
 
 body {
+  @include shared-common;
   @include shared-body;
 }
 

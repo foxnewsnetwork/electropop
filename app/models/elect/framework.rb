@@ -11,6 +11,7 @@
 #
 
 class Elect::Framework < ActiveRecord::Base
+  FrameworkTypes = ['backend','frontend'].map(&:freeze).freeze
   self.table_name = 'elect_frameworks'
   belongs_to :project,
     class_name: 'Elect::Project'
