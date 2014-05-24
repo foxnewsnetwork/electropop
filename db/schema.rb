@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140511035538) do
+ActiveRecord::Schema.define(version: 20140523052535) do
 
   create_table "elect_external_links", force: true do |t|
     t.integer  "project_id"
@@ -42,6 +42,19 @@ ActiveRecord::Schema.define(version: 20140511035538) do
   end
 
   add_index "elect_languages", ["project_id"], name: "index_elect_languages_on_project_id", using: :btree
+
+  create_table "elect_pictures", force: true do |t|
+    t.integer  "project_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "pic_file_name"
+    t.string   "pic_content_type"
+    t.integer  "pic_file_size"
+    t.datetime "pic_updated_at"
+  end
+
+  add_index "elect_pictures", ["project_id"], name: "index_elect_pictures_on_project_id", using: :btree
 
   create_table "elect_projects", force: true do |t|
     t.string   "permalink"

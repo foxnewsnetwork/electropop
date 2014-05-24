@@ -12,6 +12,7 @@ Electropop::Application.routes.draw do
   namespace :admin do
     resources :languages, only: [:destroy], controller: 'elect/languages'
     resources :frameworks, only: [:destroy], controller: 'elect/frameworks'
+    resources :pictures, only: [:destroy], controller: 'elect/pictures'
     resources :externals, only: [:destroy], controller: 'elect/externals'
     resources :expos, only: [:edit, :update], controller: 'elect/expos'
     resources :demos, only: [:destroy], controller: 'elect/demos'
@@ -20,6 +21,7 @@ Electropop::Application.routes.draw do
       resources :languages, only: [:create], controller: 'elect/projects/languages'
       resources :frameworks, only: [:create], controller: 'elect/projects/frameworks'
       resources :externals, only: [:create], controller: 'elect/projects/externals'
+      resources :pictures, only: [:create], controller: 'elect/projects/pictures'
     end
     resources :expos, only: [:new, :create], controller: 'elect/expos'
   end

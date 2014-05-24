@@ -4,4 +4,4 @@ class Electropop.LanguageCardComponent extends Ember.Component
     @get('language.name')
   +computed name
   language_class: ->
-    (@get('name') || 'blank') + "-card"
+    ((@get('name') || 'blank') + "-card").toLowerCase()

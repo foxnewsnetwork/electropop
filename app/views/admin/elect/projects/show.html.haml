@@ -70,3 +70,18 @@
           = f.label :name
           = f.text_field :name, class: 'form-control'
         = f.submit
+
+  .row
+    .one-whole
+      .list-group= render partial: 'picture', collection: project.pictures
+
+  .row
+    .one-third
+      = form_for :pictures, url: admin_project_pictures_path(project), multipart: true do |f|
+        .form-group
+          = f.label :name
+          = f.text_field :name, class: 'form-control'
+        .form-group
+          = f.label :pic
+          = f.file_field :pic, class: 'form-control'
+        = f.submit      

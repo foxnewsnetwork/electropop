@@ -34,6 +34,8 @@ class Elect::Project < ActiveRecord::Base
     class_name: 'Elect::Framework'
   has_many :external_links,
     class_name: 'Elect::ExternalLink'
+  has_many :pictures,
+    class_name: 'Elect::Picture'
 
   before_create :_create_permalink
 

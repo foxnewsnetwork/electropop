@@ -1,0 +1,6 @@
+.list-group-item
+  .thumbnail
+    = image_tag picture.pic.url
+  .pull-right
+    = link_to admin_picture_path(picture), method: :delete do
+      %i.fa-times
