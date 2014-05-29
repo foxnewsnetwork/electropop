@@ -32,9 +32,23 @@ TODO
 9. ruby rails activerecord models
 10. fixed the issue with card 0 instead of being just expo
 
+Wednesday
+=
++ rehauling projects landing page
++ scrolling views
+
+Tuesday
+=
++ Landing page could be flashier, but not really necessary
++ rehaul projects page
+
+Friday
+=
+- overhaul the landing page
+
 Thursday
 =
-
+- Overhauled pictures
 
 Weekends
 

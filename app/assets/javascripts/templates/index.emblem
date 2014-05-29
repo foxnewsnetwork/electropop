@@ -1,6 +1,10 @@
+
 #templates-index
+  .hidden
+    imploding-word word='Tom Chen'
+  
   .container
-    .row.horizon
+    .row.horizon.hidden
       .two-third
         h4.fuzzy-white
           | Build using 
@@ -8,22 +12,23 @@
           | on 
           span.fuzzy-electrify rails 
           | instead of common sense
-    .row
+    .row.hidden
       .two-quarters.pull-right
         h3.fuzzy-white.align-right
           | Where design
           span.fuzzy-highlight.upcase  does not 
           | meet functionality
 
-    .row
+    .row.zooming-words
       .two-third
-        h1.white.crystal
-          | Tom Chen's 
+        h1.white.align-left
+          .upcase Tom Chen
           span.flare.parantheses over-designed
-          | profile webpage
+          | portfolio
 
-  .bottom-fixture
-    .pull-right
-      link-to 'projects'
-        | Skip Intro 
-        i.fa-chevron-right
+  .bottom-catcher
+    scroll-catcher direction='down' cardDown='cardDown'
+  
+  .bottom-fixture.align-center
+    link-to 'projects'
+      i.fa-chevron-down

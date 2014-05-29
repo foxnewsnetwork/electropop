@@ -1,0 +1,14 @@
+@mixin templates-components-imploding-word {
+  .imploding-word {
+    color: $text-white;
+    text-transform: uppercase;
+  }
+  .imploding-letter {
+    display: none;
+    font-size: 14em;
+    @include text-shadow(#fff 0px 0px 6px);
+  }
+  .shrink-glow {
+    @include animation(animation-shrinkglow 0.3s);
+  }
+}

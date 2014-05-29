@@ -1,0 +1,14 @@
+@include keyframes(animations-shrinkglow) { 
+  0% {
+    @include text-shadow(#fff 0px 0px 6px);
+    @include rotateX(0deg);
+  }
+  50% {
+    @include text-shadow(#fff 0px 0px 16px);
+    @include rotateX(45deg);
+  }
+  100% {
+    @include text-shadow(#fff 0px 0px 26px);
+    @include rotateX(90deg);
+  }
+}

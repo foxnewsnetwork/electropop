@@ -7,8 +7,10 @@
 @import 'templates/components/spin-wheel';
 @import 'templates/components/scroll-catcher';
 @import 'templates/components/language-breakdown';
+@import 'templates/components/imploding-word';
 
 @mixin shared-main {
+  @include templates-components-imploding-word;
   @include templates-components-spin-wheel;
   @include templates-components-scroll-catcher;
   @include templates-components-language-breakdown;

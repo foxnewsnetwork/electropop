@@ -1,0 +1,3 @@
+.imploding-word
+  each letter in letters
+    imploding-letter letter=letter

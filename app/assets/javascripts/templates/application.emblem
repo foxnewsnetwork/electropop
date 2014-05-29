@@ -1,2 +1,13 @@
 main
+  .mid-left-fixed
+    ul
+      li.active
+        link-to 'index'
+          i.fa-home
+      li
+        link-to 'projects'
+          i.fa-database
+      li
+        link-to 'contacts'
+          i.fa-phone
   #{outlet}

@@ -12,6 +12,7 @@
 @import 'animations/spintwirl';
 @import 'animations/shadowshift';
 @import 'animations/fading';
+@import 'animations/shrinkglow';
 
 body {
   @include shared-common;
@@ -22,6 +23,30 @@ main {
   @include shared-main;
 }
 
+.mid-left-fixed {
+  position: fixed;
+  left: 15px;
+  top: 35%;
+  i {
+    @extend .fa-3x;
+  }
+  ul {
+    list-style: none;
+    padding-left: 5px;
+  }
+  li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    a {
+      color: $text-white;
+      &.active {
+        color: darken($highlight-orange, 10);
+      }
+    }
+  }
+}
+  
 .middler {
   display: none;
   @include shared-middler;  

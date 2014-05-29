@@ -1,0 +1,1 @@
+class Electropop.ZoomWordsView extends Ember.View

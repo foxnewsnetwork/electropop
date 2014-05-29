@@ -1,21 +1,32 @@
 @mixin templates-index {
   margin-top: 150px;
-
+  .imploding-word {
+    position: fixed;
+    top: 30%;
+    left: 46%;
+    text-align: center;
+  } 
+  .imploding-letter {
+    position: absolute;
+  } 
+  .zooming-words {
+    margin-top: 18%;
+  }
   .fuzzy-white {
+    @include text-shadow(fade-out($text-white, 0.4) 0 0 5px);
     color: transparent;
-    text-shadow: 0 0 5px fade-out($text-white, 0.4);
   }
   .fuzzy-highlight {
+    @include text-shadow(fade-out($highlight-orange, 0.5) 0 0 6px); 
     color: transparent;
-    text-shadow: 0 0 6px fade-out($highlight-orange, 0.5); 
   }
   .fuzzy-flare {
+    @include text-shadow(fade-out($text-flare, 0.5) 0 0 6px); 
     color: transparent;
-    text-shadow: 0 0 6px fade-out($text-flare, 0.5); 
   }
   .fuzzy-electrify {
+    @include text-shadow(fade-out($highlight-blue, 0.5) 0 0 6px); 
     color: transparent;
-    text-shadow: 0 0 6px fade-out($highlight-blue, 0.5); 
   }
   .crystal {
     text-align: center;
@@ -26,6 +37,25 @@
     }
     a {
       font-size: 22px;
+    }
+  }
+  .bottom-catcher {
+    @include display-box;
+    @include box-orient(horizontal);
+    @include box-align(center);
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    text-align: center;
+    bottom: 5%;
+    width: 100%;
+    .scroll-catcher {
+      @include box-flex(1);
+      width: auto;
+    }
+    .visible {
+      @include animation(animations-beat2 0.55s infinite);
+      color: $text-white;
     }
   }
 }

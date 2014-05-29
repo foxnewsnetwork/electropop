@@ -8,3 +8,12 @@
     background-size: 225px 220px; 
   }
 }
+
+@include keyframes(animations-beat2) { 
+  0%, 100% {
+    @include scaleX(1);
+  }
+  15% {
+    @include scaleX(1.15);
+  }
+}
