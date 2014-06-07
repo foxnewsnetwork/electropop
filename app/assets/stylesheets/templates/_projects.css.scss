@@ -1,16 +1,81 @@
-
 @mixin templates-projects {
   @include templates-components-spin-wheel;
-  .vertical-text {
-    @include rotate(90deg);
+  overflow: hidden;
+  .bottom-nav {
+    position: fixed;
+    bottom: 10%;
+    min-width: 100%;
+    @include translateX(45.85%);
   }
-  .flip-vertical {
-    @include rotate(-90deg);
+  .top-catcher {
+    top: 5%;
   }
-  h1 {
-    color: $text-flare;
+  .bottom-catcher {
+    bottom: 5%;
   }
-  .pushed { 
-    padding-right: 0px;
+  .top-catcher, 
+  .bottom-catcher {
+    @include display-box;
+    @include box-orient(horizontal);
+    @include box-align(center);
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    .scroll-catcher {
+      @include box-flex(1);
+      width: auto;
+    }
+    .visible {
+      color: $text-white;
+    }
+  }
+  .top-fixture,
+  .bottom-fixture {
+    text-align: center;
+    i { 
+      @extend .fa-2x;
+    }
+  }
+  .top-fixture {
+    top: 2%;
+  }
+  .bottom-fixture {
+    bottom: 2%;
+  }
+  .full-height {
+    @include display-box;
+    @include box-orient(horizontal);
+    @include box-align(center);
+    @include box-pack(justify);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    min-height: 800px;
+  }
+  .front-and-center {
+    color: $text-white;
+    font-size: 2em;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+  }
+  .fuzzy-white {
+    @include text-shadow(fade-out($text-white, 0.4) 0 0 5px);
+    color: transparent;
+  }
+  .fuzzy-highlight {
+    @include text-shadow(fade-out($highlight-orange, 0.5) 0 0 6px); 
+    color: transparent;
+  }
+  .fuzzy-flare {
+    @include text-shadow(fade-out($text-flare, 0.5) 0 0 6px); 
+    color: transparent;
+  }
+  .fuzzy-electrify {
+    @include text-shadow(fade-out($highlight-blue, 0.5) 0 0 6px); 
+    color: transparent;
   }
 }

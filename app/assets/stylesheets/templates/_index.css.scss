@@ -12,22 +12,7 @@
   .zooming-words {
     margin-top: 18%;
   }
-  .fuzzy-white {
-    @include text-shadow(fade-out($text-white, 0.4) 0 0 5px);
-    color: transparent;
-  }
-  .fuzzy-highlight {
-    @include text-shadow(fade-out($highlight-orange, 0.5) 0 0 6px); 
-    color: transparent;
-  }
-  .fuzzy-flare {
-    @include text-shadow(fade-out($text-flare, 0.5) 0 0 6px); 
-    color: transparent;
-  }
-  .fuzzy-electrify {
-    @include text-shadow(fade-out($highlight-blue, 0.5) 0 0 6px); 
-    color: transparent;
-  }
+  
   .crystal {
     text-align: center;
   }
@@ -54,7 +39,6 @@
       width: auto;
     }
     .visible {
-      @include animation(animations-beat2 0.55s infinite);
       color: $text-white;
     }
   }

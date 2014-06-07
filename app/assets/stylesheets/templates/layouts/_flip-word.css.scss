@@ -1,0 +1,23 @@
+@mixin templates-layouts-flip-word {
+  ul.flip-word {
+    list-style: none;
+    text-align: center;
+    li {
+      &.transition-in {
+        @include animation(animations-weakflip);
+        @include animation-duration(0.6s);
+        opacity: 1;
+      }
+      &.transition-out {
+        @include animation(animations-weakflip);
+        @include animation-direction(reverse);
+        @include animation-duration(0.6s);
+        opacity: 0;
+      }
+      &.on-display {
+        @include animation(animations-rotateflash);
+        @include animation-duration(3s);
+      }
+    }
+  }
+}

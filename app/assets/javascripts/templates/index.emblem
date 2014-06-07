@@ -4,21 +4,6 @@
     imploding-word word='Tom Chen'
   
   .container
-    .row.horizon.hidden
-      .two-third
-        h4.fuzzy-white
-          | Build using 
-          span.fuzzy-flare emberjs 
-          | on 
-          span.fuzzy-electrify rails 
-          | instead of common sense
-    .row.hidden
-      .two-quarters.pull-right
-        h3.fuzzy-white.align-right
-          | Where design
-          span.fuzzy-highlight.upcase  does not 
-          | meet functionality
-
     .row.zooming-words
       .two-third
         h1.white.align-left

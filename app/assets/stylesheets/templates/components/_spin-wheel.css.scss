@@ -6,83 +6,15 @@
     visibility: none;
   }
   .wheel {
-    list-style: none;
-    width: 100%;
-    margin-top: -15px;
-  }
-  div.wheel-spoke {
-    $gradient-start: darken($highlight-blue, 25%);
-    @include background-image(linear-gradient(left, $gradient-start, $background-black));
-  }
-  a.wheel-spoke {
-    $gradient-start: darken($highlight-blue, 15%);
-    $shadow-blue: lighten($highlight-blue, 20%);
-    $shadow-indigo: darken($highlight-blue, 35%);
-    @include background-image(linear-gradient(left, $gradient-start, $background-black));
-    &.active {
-      $gradient-start: darken($highlight-orange, 25%);
-      @include background-image(linear-gradient(left, $gradient-start, $background-black));
-      padding-top: 15px;
-      padding-bottom: 15px;
-      margin-left: -10px;
-    }
-    &:hover {
-      @include background-image(linear-gradient(left, $shadow-indigo, $background-black));
-    }
+    @include display-box;
+    @include box-orient(horizontal);
+    @include box-align(center);
+    display: flex;
+    justify-content: space-around;
   }
   .wheel-spoke {
-    $shadow-blue: lighten($highlight-blue, 20%);
-    $shadow-indigo: darken($highlight-blue, 35%);
-    @include box-shadow($shadow-blue 0 0 35px, $shadow-indigo 0 0 3px 1px inset);
-    @include border-left-radius(10px);
-
-    position: relative;
-    margin-bottom: 5px;
-    display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    color: $text-white;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  $i: -150;
-  @while $i < 150 {
-    .alignment-#{$i} {
-      margin-left: 0px + $i;
-    }
-    $i: $i + 5;
-  }
-
-  .title-card {
-    font-size: 20px;
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  .desc-card {
-    font-size: 14px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-  .debug-card {
-    display: none;
-  }
-  figure, .text-block {
-    display: inline-block;
-  }
-  figure {
-    padding-left: 5px;
-
-    width: 10%;
     i {
-      @extend .fa-4x;
+      @extend .fa-3x;
     }
-  }
-  .text-block {
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 90%;
   }
 }

@@ -1,6 +1,40 @@
 #templates-projects
-  .container-fluid
-    .row
-      .two-thirds.pulled
-      .one-third.pushed
-        spin-wheel models=projects
+  .top-fixture
+    link-to 'index'
+      i.fa-chevron-up
+
+  .top-catcher
+    scroll-catcher direction='up' cardUp='cardUp'
+
+  .front-and-center
+    Electropop.FlipWordView
+      flip-word ccs=0
+        | Build using 
+        span.flare emberjs 
+        | on 
+        span.electrify rails 
+        | instead of common sense
+
+      flip-word ccs=1
+        | Where design
+        span.highlight.upcase  does not 
+        | meet functionality
+
+      flip-word ccs=2
+        | Tom Chen's 
+        span.parantheses.highlight shamelessly 
+        | over-designed 
+        span.flare HTML5
+        |  / 
+        span.electrify CSS3 
+        | portfolio
+
+  .bottom-nav
+    spin-wheel models=projects
+
+  .bottom-catcher
+    scroll-catcher direction='down' cardDown='cardDown'
+
+  .bottom-fixture
+    link-to 'contacts'
+      i.fa-chevron-down

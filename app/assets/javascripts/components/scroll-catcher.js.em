@@ -1,5 +1,5 @@
 class Electropop.ScrollCatcherComponent extends Ember.Component with Electropop.Scrolling
-  mousewheel_threshold: 10
+  mousewheel_threshold: 2
   willInsertElement: ->
     @reset_count()
     @bindScrolling()

@@ -15,8 +15,11 @@
       font-weight: bold;
     }
     .completion-bar {
+      @include transition-property(width);
+      @include transition-duration(0.3s);
+      @include transition-timing-function(ease-out);
       background-color: $highlight-orange;
-      min-height: 2px;   
+      min-height: 2px;
     }
   }
 }

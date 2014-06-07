@@ -8,8 +8,10 @@
 @import 'templates/components/scroll-catcher';
 @import 'templates/components/language-breakdown';
 @import 'templates/components/imploding-word';
+@import 'templates/layouts/flip-word';
 
 @mixin shared-main {
+  @include templates-layouts-flip-word;
   @include templates-components-imploding-word;
   @include templates-components-spin-wheel;
   @include templates-components-scroll-catcher;

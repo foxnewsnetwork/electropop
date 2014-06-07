@@ -1,0 +1,12 @@
+@include keyframes(animations-weakflip) { 
+  0% {
+    @include transform(rotateY(90deg));
+    @include opacity(0);
+  }
+  20% {
+    @include opacity(1);
+  }
+  100% {
+    @include transform(rotateY(0deg));
+  }
+}
